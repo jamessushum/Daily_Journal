@@ -1,23 +1,19 @@
-const journalEntries = [
-  {
-    date: "May 29, 2020",
-    concepts: "CSS Flexbox",
-    entry: "Learned how to effectively use CSS flexbox.",
-    mood: "Happy"
-  },
-  {
-    date: "June 1, 2020",
-    concepts: "DOM Manipulation",
-    entry: "Learned about document.querySelector() to select specific HTML elements in the DOM.",
-    mood: "Ecstatic"
-  },
-  {
-    date: "June 2, 2020",
-    concepts: "JavaScript objects, functions and iterators",
-    entry: "Learned about the for...of JavaScript iterator and how it can be incorporated with objects and functions.",
-    mood: "Ecstatic"
-  }
-]
+// Array to hold parsed JSON entries object
+let journalEntries = [];
+
+// Function to fetch JSON entries object, then parse into JS, then store in journalEntries array
+const getEntriesData = () => {
+  return fetch("http://localhost:8088/entries").then((httpResponse) => {
+    return httpResponse.json()
+  }).then((arrayOfEntries) => {
+    journalEntries = arrayOfEntries
+  })
+}
+
+// Invoke getEntriesData then renderEntries to display entries in DOM
+getEntriesData().then(() => {
+  renderEntries()
+})
 
 // Convert journalEntries objects into HTML
 const entriesHTMLConverter = (entriesObject) => {
@@ -34,5 +30,3 @@ const renderEntries = () => {
     htmlElement.innerHTML += entryHTML
   }
 }
-
-renderEntries();
