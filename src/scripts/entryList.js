@@ -1,3 +1,7 @@
+// Import Module
+import api from "./data.js"
+import converter from "./entryComponent.js"
+
 // DisplayEntries object houses renderEntries method that iterates through journalEntries object, converts each object into HTML, grabs HTML DOM element and places HTML into DOM element
 const displayEntries = {
   renderEntries() {
@@ -8,3 +12,6 @@ const displayEntries = {
     }
   }
 }
+
+// Export Module
+export default displayEntries;

@@ -6,3 +6,6 @@ const converter = {
     return entriesHTMLRepresentation
   }
 }
+
+// Export Module
+export default converter; 

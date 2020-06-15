@@ -11,3 +11,6 @@ const api = {
         })
   }
 }
+
+// Export Module
+export default api;
