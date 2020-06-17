@@ -20,6 +20,13 @@
       "entry": "Learned about the for...of JavaScript iterator and how it can be incorporated with objects and functions.",
       "mood": "Ecstatic",
       "id": 3
+    },
+    {
+      "date": "2020-06-17",
+      "concepts": "JavaScript Factory Functions",
+      "entry": "Learned to use factory functions to create objects dynamically.",
+      "mood": "ecstatic",
+      "id": 4
     }
   ]
 }
