@@ -9,6 +9,13 @@ const api = {
         .then(arrayOfEntries => {
           this.journalEntries = arrayOfEntries
         })
+  },
+  saveJournalEntries(newEntryObject) {
+    return fetch("http://localhost:8088/entries", {
+      method: "POST",
+      headers: {"Content-Type": "application/json"},
+      body: JSON.stringify(newEntryObject)
+    })
   }
 }
 
