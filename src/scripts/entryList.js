@@ -1,11 +1,10 @@
 // Import Module
-import api from "./data.js"
 import converter from "./entryComponent.js"
 
-// DisplayEntries object houses renderEntries method that iterates through journalEntries object, converts each object into HTML, grabs HTML DOM element and places HTML into DOM element
+// DisplayEntries object houses renderEntries method that iterates through passed-in array of entries objects, converts each object into HTML, grabs HTML DOM element and places HTML into DOM element
 const displayEntries = {
-  renderEntries() {
-    for (const currentEntryObject of api.journalEntries) {
+  renderEntries(arrayOfEntries) {
+    for (const currentEntryObject of arrayOfEntries) {
       const entryHTML = converter.entriesHTMLConverter(currentEntryObject)
       const htmlElement = document.querySelector(".entryLog")
       htmlElement.innerHTML += entryHTML
