@@ -2,9 +2,10 @@
 import api from "./data.js"
 import displayEntries from "./entryList.js"
 import createJournalEntry from "./createEntry.js"
+import allRadioButtons from "./radioButton.js"
 
-// Invoke getEntriesData method in api object then invoke renderEntries method in displayEntries object to display entries in DOM
-api.getEntriesData().then(() => {displayEntries.renderEntries()})
+// Invoke getEntriesData method in api object then invoke renderEntries method in displayEntries object passing-in journalEntries array to display all entries in DOM
+api.getEntriesData().then(() => {displayEntries.renderEntries(api.journalEntries)})
 
 // Grabbing the submit button HTML element in the DOM
 const submitElement = document.getElementById("submit")
@@ -29,3 +30,6 @@ submitElement.addEventListener('click', (clickEvent) => {
     api.saveJournalEntries(journalEntryObject)
   }
 })
+
+// Invoking moodFilter method in allRadioButtons object to activate filter journal entries by mood feature
+allRadioButtons.moodFilter();
