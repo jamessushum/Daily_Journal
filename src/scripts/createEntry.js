@@ -1,3 +1,4 @@
+// Function creating new entry object per parameters passed-in
 const createJournalEntry = (date, concepts, entry, mood) => {
   return {
     date: date,
