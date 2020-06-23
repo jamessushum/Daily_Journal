@@ -7,6 +7,7 @@ const converter = {
       <div class="date">${entriesObject.date}</div>
       <div class="mood">I'm feeling ${entriesObject.mood}</div>
       <div class="entry">${entriesObject.entry}</div>
+      <button id="editEntry--${entriesObject.id}">Edit Entry</button>
       <button id="deleteEntry--${entriesObject.id}">Delete Entry</button>
     </section>
     `

@@ -1,11 +1,9 @@
-// API object houses methods to get, save, delete data in API
+// API object houses methods to get, save, delete and edit/put data in API
 const api = {
   journalEntries: [],
   getEntriesData() {
     return fetch("http://localhost:8088/entries")
-      .then(httpResponse => {
-        return httpResponse.json()
-      })
+      .then(response => response.json())
         .then(arrayOfEntries => {
           this.journalEntries = arrayOfEntries
           return arrayOfEntries
@@ -23,6 +21,17 @@ const api = {
       method: "DELETE"
     })
       .then(response => response.json())
+  },
+  getSingleEntry(entryId) {
+    return fetch(`http://localhost:8088/entries/${entryId}`)
+      .then(response => response.json())
+  },
+  editJournalEntry(entryId, updatedEntryObject) {
+    return fetch(`http://localhost:8088/entries/${entryId}`, {
+      method: "PUT",
+      headers: {"Content-Type": "application/json"},
+      body: JSON.stringify(updatedEntryObject)
+    })
   }
 }
 

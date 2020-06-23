@@ -1,21 +1,21 @@
 {
   "entries": [
     {
-      "date": "May 29, 2020",
+      "date": "2020-05-29",
       "concepts": "CSS Flexbox",
       "entry": "Learned how to effectively use CSS flexbox.",
       "mood": "happy",
       "id": 1
     },
     {
-      "date": "June 1, 2020",
+      "date": "2020-06-01",
       "concepts": "DOM Manipulation",
       "entry": "Learned about document.querySelector() to select specific HTML elements in the DOM.",
       "mood": "ecstatic",
       "id": 2
     },
     {
-      "date": "June 2, 2020",
+      "date": "2020-06-02",
       "concepts": "JavaScript objects, functions and iterators",
       "entry": "Learned about the for...of JavaScript iterator and how it can be incorporated with objects and functions.",
       "mood": "ecstatic",
