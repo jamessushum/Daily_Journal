@@ -1,4 +1,4 @@
-// Api object houses journalEntries key with value of empty array to hold parsed JSON data as well as getEntriesData method to fetch JSON data then parse data to JS and then assign journalEntries array with parsed data
+// API object houses methods to get, save, delete data in API
 const api = {
   journalEntries: [],
   getEntriesData() {
@@ -8,6 +8,7 @@ const api = {
       })
         .then(arrayOfEntries => {
           this.journalEntries = arrayOfEntries
+          return arrayOfEntries
         })
   },
   saveJournalEntries(newEntryObject) {
@@ -16,6 +17,12 @@ const api = {
       headers: {"Content-Type": "application/json"},
       body: JSON.stringify(newEntryObject)
     })
+  },
+  deleteJournalEntry(entryId) {
+    return fetch(`http://localhost:8088/entries/${entryId}`, {
+      method: "DELETE"
+    })
+      .then(response => response.json())
   }
 }
 
