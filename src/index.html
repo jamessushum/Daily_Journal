@@ -38,22 +38,29 @@
     </form>
     <!-- Form Ends -->
 
-    <!-- Mood Radio Buttons -->
-    <fieldset id="radioButtons">
-      <legend>Filter Journal Entries by Mood</legend>
-      <!-- Happy Mood -->
-      <input type="radio" id="happy" name="moods" value="happy">
-      <label for="happy">Happy</label>
-      <!-- Sad Mood -->
-      <input type="radio" id="sad" name="moods" value="sad">
-      <label for="sad">Sad</label>
-      <!-- Uncertain Mood -->
-      <input type="radio" id="uncertain" name="moods" value="uncertain">
-      <label for="uncertain">Uncertain</label>
-      <!-- Ecstatic Mood -->
-      <input type="radio" id="ecstatic" name="moods" value="ecstatic">
-      <label for="ecstatic">Ecstatic</label>
-    </fieldset>
+    <div class="searchBy">
+      <!-- Mood Radio Buttons -->
+      <fieldset id="radioButtons">
+        <legend>Filter Journal Entries by Mood</legend>
+        <!-- Happy Mood -->
+        <input type="radio" id="happy" name="moods" value="happy">
+        <label for="happy">Happy</label>
+        <!-- Sad Mood -->
+        <input type="radio" id="sad" name="moods" value="sad">
+        <label for="sad">Sad</label>
+        <!-- Uncertain Mood -->
+        <input type="radio" id="uncertain" name="moods" value="uncertain">
+        <label for="uncertain">Uncertain</label>
+        <!-- Ecstatic Mood -->
+        <input type="radio" id="ecstatic" name="moods" value="ecstatic">
+        <label for="ecstatic">Ecstatic</label>
+      </fieldset>
+      <!-- Search Input Field -->
+      <fieldset id="searchInput">
+        <legend>Search Journal Entries</legend>
+        <input type="text" id="searchEntry" placeholder="Enter search term" size="50">
+      </fieldset>
+    </div>
 
     <!-- Display Entries -->
     <article class="entryLog">
