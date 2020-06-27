@@ -5,6 +5,7 @@ import allRadioButtons from "./radioButton.js"
 import allDeleteButtons from "./deleteButton.js"
 import editButton from "./editButton.js"
 import submitButton from "./submitButton.js"
+import searchEntry from "./searchEntry.js"
 
 // Invoking method fetching entries from API then invoking method to display all entries in DOM passing-in fetch response as an argument
 api.getEntriesData().then(response => {displayEntries.renderEntries(response)})
@@ -20,3 +21,6 @@ allDeleteButtons.deleteEntry();
 
 // Invoking method to retrieve selected journal entry to be edited and display in form fields
 editButton.editEntry();
+
+// Invoking method to filter and display journal entries by user searched term in search bar
+searchEntry.searchListener();
